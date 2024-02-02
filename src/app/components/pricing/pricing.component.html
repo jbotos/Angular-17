@@ -1,0 +1,32 @@
+ 
+ <section id="pricing" class="secondary-color text-center scrollto clearfix ">
+    <div class="row clearfix">
+
+        <div class="section-heading">
+            <h3>{{ page.titleTag }}</h3>
+            <h2 class="section-title">{{ page.title }}</h2>
+        </div>
+
+        @for (plan of page.plans; track plan) {
+            <div class="pricing-block {{ plan.featured ? 'featured' : '' }} col-3 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="pricing-block-content">
+                    <h3>{{ plan.name }}</h3>
+                    <p class="pricing-sub">{{ plan.tag }}</p>
+                    <div class="pricing">
+                        <div class="price"><span>$</span>{{ plan.price }}</div>
+                        <p>{{ plan.summary }}</p>
+                    </div>
+                    <ul>
+                        @for (option of plan.options; track option) {
+                        <li>{{ option }}</li>
+                        }
+                    </ul>
+                    <a href="#" class="button">BUY TODAY</a>
+                </div>
+            </div>
+        }
+
+     
+    </div>
+</section>
+ 

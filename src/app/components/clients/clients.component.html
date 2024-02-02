@@ -1,0 +1,22 @@
+<section id="clients" class="scrollto clearfix">
+    <div class="row clearfix">
+
+        <div class="col-3">
+            <div class="section-heading">
+                <h3>{{ page.titleTag }}</h3>
+                <h2 class="section-title">{{ page.title }}</h2>
+                <p class="section-subtitle">{{ page.description }}</p>
+            </div>
+        </div>
+
+        <div id="clients" class="col-2-3">
+            @for (client of page.clients; track client) {
+                <a href="{{ client.src }}" class="col-3 wow fadeIn" data-featherlight="image" data-wow-delay="0.1s">
+                    <img src="{{ client.src }}" alt="{{ client.name }}" class="wow fadeIn"/>
+                    <div class="client-overlay"><span>{{ client.name }}</span></div>
+                </a>
+            }
+        </div>
+
+    </div>
+</section>

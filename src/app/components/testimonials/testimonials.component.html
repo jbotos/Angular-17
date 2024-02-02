@@ -1,0 +1,22 @@
+
+<aside id="testimonials" class="scrollto text-center" data-enllax-ratio=".2">
+
+    <div class="row clearfix">
+
+        <div class="section-heading">
+            <h3>{{ page.titleTag }}</h3>
+            <h2 class="section-title">{{ page.title }}</h2>
+        </div>
+
+        @for (testimonial of page.testimonials; track testimonial) {
+            <blockquote class="col-3 testimonial classic">
+                <img src="{{ testimonial.src }}" alt="{{ testimonial.title }}"/>
+                <q>{{ testimonial.summary }}</q>
+                <footer>{{ testimonial.name }} - {{ testimonial.title }}</footer>
+            </blockquote>
+        }
+
+    </div>
+
+</aside>
+ 

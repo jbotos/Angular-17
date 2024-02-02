@@ -1,0 +1,24 @@
+<section id="about" class="introduction scrollto">
+    <div class="row clearfix">
+        <div class="col-3">
+            <div class="section-heading">
+                <h3>{{ page.titleTag }}</h3>
+                <h2 class="section-title">{{ page.title }} </h2>
+                <p class="section-subtitle">{{ page.description }}</p>
+            </div>
+        </div>
+        <div class="col-2-3">
+            @for (feature of page.features; track feature) {
+                <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="icon">
+                        <i class="fa {{ feature.icon }} fa-2x"></i>
+                    </div>
+                    <div class="icon-block-description">
+                        <h4>{{ feature.title }}</h4>
+                        <p>{{ feature.summary }}</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
